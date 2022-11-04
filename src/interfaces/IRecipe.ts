@@ -9,7 +9,7 @@ export interface IRecipe {
     strTags: string;
     strYoutube: string;
     ingredients: {
-        name: string,
-        amount: string
-    }[]
+        name: string;
+        amount: string;
+    }[];
 }

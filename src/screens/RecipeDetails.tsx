@@ -5,7 +5,7 @@ import Toolbar from '../components/Toolbar';
 const RecipeDetails = () => {
     return (
         <ScrollView>
-            <Toolbar/>
+            <Toolbar />
         </ScrollView>
     );
 };

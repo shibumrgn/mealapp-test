@@ -1,7 +1,6 @@
-import { View, Text, Pressable } from 'react-native'
-import React from 'react'
-import { Brand } from '../constants/Brand'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import {Text, Pressable, StyleSheet} from 'react-native';
+import React from 'react';
+import {Brand} from '../constants/Brand';
 
 interface IProps {
     title: string;
@@ -10,23 +9,27 @@ interface IProps {
 }
 
 const CustomButton = (props: IProps) => {
-  return (
-    <Pressable style={{
-        marginEnd: 5
-    }}
-        onPress={props.onClick}
-    >
-      <Text
-        style={{
-            backgroundColor: props.isHighlighted ? Brand.accentColor : Brand?.primaryColor,
+    const styles = StyleSheet.create({
+        parent: {
+            marginEnd: 5,
+        },
+        title: {
+            backgroundColor: props.isHighlighted
+                ? Brand.accentColor
+                : Brand?.primaryColor,
             padding: 10,
             borderRadius: 10,
-            color:  !props.isHighlighted ? Brand.accentColor : Brand?.primaryColor,
-            fontWeight: 'bold'
-        }}
-      >{props.title}</Text>
-    </Pressable>
-  )
-}
+            color: !props.isHighlighted
+                ? Brand.accentColor
+                : Brand?.primaryColor,
+            fontWeight: 'bold',
+        },
+    });
+    return (
+        <Pressable style={styles.parent} onPress={props.onClick}>
+            <Text style={styles.title}>{props.title}</Text>
+        </Pressable>
+    );
+};
 
-export default CustomButton
+export default CustomButton;
