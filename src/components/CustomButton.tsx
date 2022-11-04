@@ -1,6 +1,6 @@
 import { View, Text, Pressable } from 'react-native'
 import React from 'react'
-import { Brand } from '../Brand'
+import { Brand } from '../constants/Brand'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface IProps {

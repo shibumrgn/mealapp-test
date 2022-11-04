@@ -1,6 +1,6 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
-import { Brand } from '../Brand'
+import { Brand } from '../constants/Brand'
 
 interface IProps {
     title?: string;

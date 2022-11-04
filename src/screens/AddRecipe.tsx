@@ -1,7 +1,7 @@
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import { Brand } from '../Brand'
+import { Brand } from '../constants/Brand'
 import VideoRecipe from '../components/recipes/VideoRecipe'
 import { IRecipe } from '../interfaces/IRecipe'
 import CustomInput from '../components/CustomInput'

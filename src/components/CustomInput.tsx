@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useMemo } from 'react'
-import { Brand } from '../Brand'
+import { Brand } from '../constants/Brand'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 interface IProps {

@@ -1,7 +1,7 @@
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { IRecipe } from '../../interfaces/IRecipe'
-import { Brand } from '../../Brand';
+import { Brand } from '../../constants/Brand';
 
 interface IProps {
     recipe: IRecipe;

@@ -15,7 +15,7 @@ import Home from './src/screens/Home';
 import Notifications from './src/screens/Notifications';
 import Bookmarks from './src/screens/Bookmarks';
 import Profile from './src/screens/Profile';
-import { Brand } from './src/Brand';
+import { Brand } from './src/constants/Brand';
 import AddRecipe from './src/screens/AddRecipe';
 LogBox.ignoreLogs(['Warning: ...']);
 LogBox.ignoreAllLogs();
