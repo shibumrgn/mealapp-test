@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "marginBottom": 30,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 30,
+          "fontWeight": "bold",
+          "marginBottom": 20,
+          "marginLeft": 20,
+        }
+      }
+    >
+      Popular Category
+    </Text>
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "paddingLeft": 20,
+          "width": "100%",
+        }
+      }
+    >
+      <View />
+    </RCTScrollView>
+  </View>,
+  <View
+    style={
+      Object {
+        "marginBottom": 30,
+      }
+    }
+  >
+    <RCTScrollView
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "paddingLeft": 20,
+          "width": "100%",
+        }
+      }
+    >
+      <View />
+    </RCTScrollView>
+  </View>,
+]
+`;

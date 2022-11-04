@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "column",
+      "width": 300,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 290,
+        "height": 280,
+        "width": 280,
+      }
+    }
+  />
+  <Text
+    numberOfLines={2}
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      }
+    }
+  >
+    Spicy Arrabiata Penne
+  </Text>
+</View>
+`;

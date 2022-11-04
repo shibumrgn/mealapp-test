@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginEnd": 10,
+      "width": 562.5,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 10,
+        "height": 200,
+        "marginBottom": 10,
+        "position": "relative",
+        "resizeMode": "contain",
+        "width": "100%",
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Spicy Arrabiata Penne
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://picsum.photos/200/300",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 32,
+            "height": 32,
+            "marginEnd": 5,
+            "width": 32,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "fontSize": 14,
+          }
+        }
+      >
+        By Shibu Murugan
+      </Text>
+    </View>
+  </View>
+</View>
+`;
