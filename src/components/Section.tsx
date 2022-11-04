@@ -5,6 +5,7 @@ import { Brand } from '../constants/Brand'
 interface IProps {
     title?: string;
     children: JSX.Element[];
+    marginLeft?: number;
 }
 
 const Section = (props: IProps) => {
@@ -17,7 +18,7 @@ const Section = (props: IProps) => {
         {
             props.title && <Text style={{
                 ...Brand.header,
-                marginLeft: 20,
+                marginLeft: props.marginLeft,
                 marginBottom: 20
             }}>
                 {props.title}

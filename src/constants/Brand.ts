@@ -4,9 +4,10 @@ import { StyleProp, TextStyle } from "react-native";
 export interface IBrand {
     header: StyleProp<TextStyle> & any,
     text: StyleProp<TextStyle> & any,
-    subText: StyleProp<TextStyle>,
+    subText: StyleProp<TextStyle> & any,
     accentColor: string,
-    primaryColor: string;
+    primaryColor: string,
+    secondaryColor: string
 }
 
 export const Brand: IBrand = {
@@ -24,5 +25,6 @@ export const Brand: IBrand = {
         fontSize: 14
     },
     accentColor: '#11e0c4',
-    primaryColor: '#ffffff'
+    primaryColor: '#ffffff',
+    secondaryColor: 'lightgrey'
 }

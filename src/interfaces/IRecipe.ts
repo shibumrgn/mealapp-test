@@ -8,4 +8,8 @@ export interface IRecipe {
     strMealThumb: string;
     strTags: string;
     strYoutube: string;
+    ingredients: {
+        name: string,
+        amount: string
+    }[]
 }

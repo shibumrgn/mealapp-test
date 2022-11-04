@@ -24,6 +24,7 @@ const TrendingNow = () => {
     return (
         <Section
             title='Trending Now 🔥'
+            marginLeft={20}
         >
             {recipes?.map(recipe => <VideoRecipe key={recipe?.idMeal} recipe={recipe}/>)}
         </Section>

@@ -42,6 +42,7 @@ const PopularCategory = () => {
     <>
         <Section
             title='Popular Category'
+            marginLeft={20}
         >
             {
                 categories?.map(category => 
