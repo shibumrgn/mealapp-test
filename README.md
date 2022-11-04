@@ -39,8 +39,18 @@ If any further problem with npm cache. Try this.
   npm start -- --reset-cache
 ```
 
-To do run Test Cases.
+## Running Tests
+
+To run tests, run the following command
 
 ```bash
   npm run test
 ```
+
+
+## If I had more time
+
+If I had more time, I would have started working on the user profile section. Redux was mainly required only for the session managment and caching of data, At starting it was not required. And with Figma, I had difficulty getting the specifications for those UI Elements. As it was mentioned to be an analysis on coding standard, hope this satisfies.
+
+Thank you.
+
