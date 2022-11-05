@@ -5,6 +5,7 @@ import {ICategory} from '../interfaces/ICategory';
 import CustomButton from './CustomButton';
 import {IRecipe} from '../interfaces/IRecipe';
 import SquareRecipe from './recipes/SquareRecipe';
+import { StyleSheet } from 'react-native';
 
 const PopularCategory = () => {
     const [categories, setCategories] = useState<ICategory[]>([]);
@@ -51,6 +52,7 @@ const PopularCategory = () => {
                             category?.strCategory ===
                             selectedCategory?.strCategory
                         }
+                        containerStyle={styles.buttons}
                         onClick={() => setSelectedCategory(category)}
                     />
                 ))}
@@ -65,3 +67,10 @@ const PopularCategory = () => {
 };
 
 export default PopularCategory;
+
+const styles = StyleSheet.create({
+    buttons: {
+        marginEnd: 5,
+        minWidth: 100
+    }
+})

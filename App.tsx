@@ -16,6 +16,8 @@ import Bookmarks from './src/screens/Bookmarks';
 import Profile from './src/screens/Profile';
 import {Brand} from './src/constants/Brand';
 import AddRecipe from './src/screens/AddRecipe';
+import SplashScreen from './src/screens/SplashScreen';
+import { Route } from './src/constants/Route';
 LogBox.ignoreLogs(['Warning: ...']);
 LogBox.ignoreAllLogs();
 
@@ -78,7 +80,7 @@ const App = () => {
                     <Animated.View style={styles.btnCircleUp}>
                         <TouchableOpacity
                             style={styles.floating}
-                            onPress={() => navigate('ADD')}>
+                            onPress={() => navigate(Route.ADD_RECIPE)}>
                             <Ionicons
                                 name={'add-outline'}
                                 color="white"
@@ -89,22 +91,22 @@ const App = () => {
                 )}
                 tabBar={renderTabBar}>
                 <CurvedBottomBar.Screen
-                    name="HOME"
+                    name={Route.HOME}
                     position="LEFT"
                     component={() => <Home />}
                 />
                 <CurvedBottomBar.Screen
-                    name="BOOKMARKS"
+                    name={Route.BOOKMARKS}
                     position="LEFT"
                     component={() => <Bookmarks />}
                 />
                 <CurvedBottomBar.Screen
-                    name="NOTIFICATIONS"
+                    name={Route.NOTIFICATIONS}
                     component={() => <Notifications />}
                     position="RIGHT"
                 />
                 <CurvedBottomBar.Screen
-                    name="PROFILE"
+                    name={Route.PROFILE}
                     component={() => <Profile />}
                     position="RIGHT"
                 />
@@ -120,9 +122,10 @@ const App = () => {
                     screenOptions={{
                         headerShown: false,
                     }}>
-                    <Root.Screen name="Home" component={APP_NAVIGATOR} />
+                    <Root.Screen name={Route.SPLASHSCREEN} component={SplashScreen} />
+                    <Root.Screen name={Route.HOME} component={APP_NAVIGATOR} />
                     <Root.Screen
-                        name="ADD"
+                        name={Route.ADD_RECIPE}
                         component={AddRecipe}
                         options={{
                             cardStyleInterpolator: props => {

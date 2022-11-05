@@ -1,11 +1,23 @@
 import {Dimensions, Image, ScrollView, StyleSheet, Text} from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Brand} from '../constants/Brand';
 import CustomInput from '../components/CustomInput';
 import Toolbar from '../components/Toolbar';
 import DetailItem from '../components/recipes/DetailItem';
+import { useDispatch } from 'react-redux';
+import { RecipeActions } from '../redux/reducers/recipeReducer';
 
 const AddRecipe = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(RecipeActions.saveRecipe({
+            hello: "workld"
+        }))
+    }, [])
+    
+
     return (
         <ScrollView style={styles.parent}>
             <Toolbar />
