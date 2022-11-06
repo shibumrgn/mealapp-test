@@ -20,45 +20,45 @@ const Section = (props: IProps) => {
             alignItems: 'center',
         },
         title: {
-            ...Brand.header as {},
+            ...(Brand.text as {}),
             marginLeft: props.marginLeft,
-            marginVertical: 10,
+            marginVertical: 20,
             flex: 1,
-            textAlignVertical: 'center'
+            textAlignVertical: 'center',
         },
         scroll: {
             width: '100%',
             display: 'flex',
             flexDirection: 'row',
             paddingLeft: 20,
+            paddingRight: 20,
         },
         seeAllContainer: {
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
-            marginRight: 10
+            marginRight: 10,
         },
         seeAll: {
             textAlign: 'center',
             marginRight: 10,
-            color: Brand.accentColor
-        }
+            color: Brand.accentColor,
+        },
     });
     return (
         <View style={styles.parent}>
-            {
-                props.title && <View
-                    style={styles.header}
-                >
+            {props.title && (
+                <View style={styles.header}>
                     <Text style={styles.title}>{props.title}</Text>
                     <View style={styles.seeAllContainer}>
                         <Text style={styles.seeAll}>See all</Text>
-                        <Ionicons name='arrow-forward-outline'
+                        <Ionicons
+                            name="arrow-forward-outline"
                             color={Brand.accentColor}
                         />
                     </View>
                 </View>
-            }
+            )}
             <ScrollView
                 showsHorizontalScrollIndicator={false}
                 horizontal

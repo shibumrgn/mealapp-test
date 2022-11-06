@@ -1,43 +1,39 @@
-import {Dimensions, Image, ScrollView, StyleSheet, Text} from 'react-native';
-import React, { useEffect } from 'react';
+import {Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect} from 'react';
 import {Brand} from '../constants/Brand';
 import CustomInput from '../components/CustomInput';
 import Toolbar from '../components/Toolbar';
 import DetailItem from '../components/recipes/DetailItem';
-import { useDispatch } from 'react-redux';
-import { RecipeActions } from '../redux/reducers/recipeReducer';
+import {useDispatch} from 'react-redux';
 
 const AddRecipe = () => {
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(RecipeActions.saveRecipe({
-            hello: "workld"
-        }))
-    }, [])
-    
+    useEffect(() => {}, []);
 
     return (
-        <ScrollView style={styles.parent}>
-            <Toolbar />
-            <Text style={styles.heading}>Create Recipe</Text>
-            <Image
-                source={{
-                    uri: 'https://picsum.photos/200/300',
-                }}
-                style={styles.image}
+        <ScrollView>
+            <Toolbar
+                title='Create Recipe'
+                isBackEnabled
             />
-            <CustomInput
-                borderColor={Brand.accentColor}
-                placeholder={'Chicken pakoras'}
-            />
-            <DetailItem title="Serves" iconName="people-outline" value="2" />
-            <DetailItem
-                title="Cook time (mins)"
-                iconName="time-outline"
-                value="45"
-            />
+            <View style={styles.parent}>
+                <Image
+                    source={{
+                        uri: 'https://picsum.photos/200/300',
+                    }}
+                    style={styles.image}
+                />
+                <CustomInput
+                    borderColor={Brand.accentColor}
+                    placeholder={'Chicken pakoras'}
+                />
+                <DetailItem title="Serves" iconName="people-outline" value="2" />
+                <DetailItem
+                    title="Cook time (mins)"
+                    iconName="time-outline"
+                    value="45"
+                />
+            </View>
         </ScrollView>
     );
 };

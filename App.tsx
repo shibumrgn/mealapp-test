@@ -17,7 +17,7 @@ import Profile from './src/screens/Profile';
 import {Brand} from './src/constants/Brand';
 import AddRecipe from './src/screens/AddRecipe';
 import SplashScreen from './src/screens/SplashScreen';
-import { Route } from './src/constants/Route';
+import {Route} from './src/constants/Route';
 LogBox.ignoreLogs(['Warning: ...']);
 LogBox.ignoreAllLogs();
 
@@ -49,7 +49,7 @@ const App = () => {
             <Ionicons
                 name={icon}
                 size={25}
-                color={routeName === selectedTab ? 'black' : 'gray'}
+                color={routeName != selectedTab ? 'lightgrey' : Brand.accentColor}
             />
         );
     };
@@ -68,8 +68,8 @@ const App = () => {
             <CurvedBottomBar.Navigator
                 type="DOWN"
                 style={styles.bottomBar}
-                height={55}
-                circleWidth={55}
+                height={75}
+                circleWidth={60}
                 bgColor="white"
                 initialRouteName="title1"
                 borderTopLeftRight
@@ -122,7 +122,10 @@ const App = () => {
                     screenOptions={{
                         headerShown: false,
                     }}>
-                    <Root.Screen name={Route.SPLASHSCREEN} component={SplashScreen} />
+                    <Root.Screen
+                        name={Route.SPLASHSCREEN}
+                        component={SplashScreen}
+                    />
                     <Root.Screen name={Route.HOME} component={APP_NAVIGATOR} />
                     <Root.Screen
                         name={Route.ADD_RECIPE}

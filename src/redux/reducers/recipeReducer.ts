@@ -1,20 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IRecipe } from "../../interfaces/IRecipe";
+import {createSlice} from '@reduxjs/toolkit';
+import {IRecipe} from '../../interfaces/IRecipe';
 
 interface RecipeState {
-    savedRecipes: IRecipe[]
+    savedRecipes: IRecipe[];
 }
 
 export const recipeSlice = createSlice({
     name: 'recipe',
     initialState: {
-        savedRecipes: []
+        savedRecipes: [],
     } as RecipeState,
     reducers: {
         saveRecipe: (state, action) => {
-            state.savedRecipes.push(action.payload)
-        }
-    }
+            state.savedRecipes.push(action.payload);
+        },
+        removeRecipe: (state, action) => {
+            state.savedRecipes = state?.savedRecipes?.filter(
+                sr => sr?.idMeal !== action?.payload?.idMeal,
+            );
+        },
+    },
 });
 
 export const RecipeActions = recipeSlice.actions;

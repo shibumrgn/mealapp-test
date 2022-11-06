@@ -1,16 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
 export const sessionSlice = createSlice({
     name: 'session',
-    initialState: {
-
-    },
-    reducers: {
-
-    }
+    initialState: {},
+    reducers: {},
 });
 
-export const {
-
-} = sessionSlice.actions;
+export const {} = sessionSlice.actions;
 export default sessionSlice.reducer;
