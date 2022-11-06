@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
         ...(Brand.tinyBold as Object),
         textAlign: 'center',
         marginBottom: 20,
-        height: 30,
     },
     titleContainer: {
         backgroundColor: '#c4edec',
