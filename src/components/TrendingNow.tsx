@@ -3,6 +3,7 @@ import {IRecipe} from '../interfaces/IRecipe';
 import axios from 'axios';
 import VideoRecipe from './recipes/VideoRecipe';
 import Section from './Section';
+import {Dimensions} from 'react-native';
 
 const TrendingNow = () => {
     const [recipes, setRecipes] = useState<IRecipe[]>([]);
@@ -23,7 +24,11 @@ const TrendingNow = () => {
     return (
         <Section title="Trending Now 🔥" marginLeft={20}>
             {recipes?.map(recipe => (
-                <VideoRecipe key={recipe?.idMeal} recipe={recipe} />
+                <VideoRecipe
+                    key={recipe?.idMeal}
+                    recipe={recipe}
+                    width={Dimensions.get('window').width * 0.75}
+                />
             ))}
         </Section>
     );
